@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Adding content with document.createElement</title>
+    <style>
+        .bar {
+            background: gray;
+            height: 20px;
+            margin: 10px;
+            color: white;
+        }
+
+        div {
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adding content with document.createElement</h1>
+    <div id="d1"></div>
+    <div id='d2'></div>
+    <div id='d3'></div>
+    <div id='d4'></div>
+    <div id='d5'></div>
+    <div id='d6'></div>
+    <div id='d7'></div>
+    <div id='d8'></div>
+    <div id='d9'></div>
+    <div id='d10'></div>
+    <div id='d11'></div>
+    <div id='d12'></div>
+    <div id='d13'></div>
+    <div id='d14'></div>
+    <div id='d15'></div>
+    <div id='d16'></div>
+    <div id='d17'></div>
+    <div id='d18'></div>
+    <div id='d19'></div>
+    <div id='d20'></div>
+    <div id='d21'></div>
+    <div id='d22'></div>
+    <div id='d23'></div>
+    <script>
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+        var t = 0;
+        for (var i = 1; i <= 20; i++) {
+            var kata = document.createElement("p");
+            var kataText = document.createTextNode(i);
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d1");
+            destination.appendChild(kata);
+        }
+
+        for (var i = 1; i <= 20; i++) {
+            if (i % 2 == 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d2");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 0; i <= 20; i++) {
+            if (i % 2 !== 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d3");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 5 == 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d4");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 1; i <= 100; i++) {
+            if (Number.isInteger(Math.sqrt(i))) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d5");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 20; i >= 1; i--) {
+            var kata = document.createElement("p");
+            var kataText = document.createTextNode(i);
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d6");
+            destination.appendChild(kata);
+        }
+
+        for (var i = 20; i > 0; i--) {
+            if (i % 2 == 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d7");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 20; i > 0; i--) {
+            if (i % 2 !== 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d8");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 100; i >= 1; i--) {
+            if (i % 5 == 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d9");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 100; i >= 1; i--) {
+            if (Number.isInteger(Math.sqrt(i))) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(i);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d10");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 0; i < sampleArray.length; i++) {
+            var kata = document.createElement("p");
+            var kataText = document.createTextNode(sampleArray[i]);
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d11");
+            destination.appendChild(kata);
+        }
+
+        for (var i = 0; i <= sampleArray.length; i++) {
+            if (sampleArray[i] % 2 == 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(sampleArray[i]);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d12");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 1; i < sampleArray.length; i++) {
+            if (sampleArray[i] % 2 !== 0) {
+                var kata = document.createElement("p");
+                var kataText = document.createTextNode(sampleArray[i]);
+                kata.appendChild(kataText);
+                var destination = document.getElementById("d13");
+                destination.appendChild(kata);
+            } else { continue }
+        }
+
+        for (var i = 1; i < sampleArray.length; i++) {
+            var sqr = Math.pow(sampleArray[i], 2)
+            var kata = document.createElement("p");
+            var kataText = document.createTextNode(sqr);
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d14");
+            destination.appendChild(kata);
+        }
+
+        for (var i = 1; i < 21; i++) {
+            t += i;
+        }
+        var kata = document.createElement("p");
+        var kataText = document.createTextNode(t);
+        kata.appendChild(kataText);
+        var destination = document.getElementById("d15");
+        destination.appendChild(kata);
+
+        for (var i = 1; i < sampleArray.length; i++) {
+            t += sampleArray[i];
+        }
+        var kata = document.createElement("p");
+        var kataText = document.createTextNode(t);
+        kata.appendChild(kataText);
+        var destination = document.getElementById("d16");
+        destination.appendChild(kata);
+
+        for (var i = 1; i < sampleArray.length; i++) {
+            var min = Math.min(...sampleArray);
+        }
+        var kata = document.createElement("p");
+        var kataText = document.createTextNode(min);
+        kata.appendChild(kataText);
+        var destination = document.getElementById("d17");
+        destination.appendChild(kata);
+
+        for (var i = 1; i < sampleArray.length; i++) {
+            var max = Math.max(...sampleArray);
+        }
+        var kata = document.createElement("p");
+        var kataText = document.createTextNode(max);
+        kata.appendChild(kataText);
+        var destination = document.getElementById("d18");
+        destination.appendChild(kata);
+
+        for (var i = 0; i < 20; i++) {
+            var kata = document.createElement("p");
+            kata.className += "boxes19";
+            var kataText = document.createTextNode("");
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d19");
+            destination.appendChild(kata);
+            document.getElementsByClassName("boxes19")[i].style.backgroundColor = 'gray'
+            document.getElementsByClassName("boxes19")[i].style.height = '20px'
+            document.getElementsByClassName("boxes19")[i].style.width = '100px'
+        }
+        for (var i = 0; i < 20; i++) {
+            var kata = document.createElement("p");
+            kata.className += "boxes20";
+            var kataText = document.createTextNode("");
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d20");
+            destination.appendChild(kata);
+            var w = 100 + (5*(i+1)) + 'px'
+            document.getElementsByClassName("boxes20")[i].style.backgroundColor = 'gray'
+            document.getElementsByClassName("boxes20")[i].style.height = '20px'
+            document.getElementsByClassName("boxes20")[i].style.width = w
+        }
+        for (var i = 0; i <= sampleArray.length; i++) {
+            var kata = document.createElement("p");
+            kata.className += "boxes21";
+            var kataText = document.createTextNode("");
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d21");
+            destination.appendChild(kata);
+            var ww = sampleArray[i] + 'px';
+            document.getElementsByClassName("boxes21")[i].style.backgroundColor = 'gray'
+            document.getElementsByClassName("boxes21")[i].style.height = '20px'
+            document.getElementsByClassName("boxes21")[i].style.width = ww
+        }
+        for (var i = 0; i <= sampleArray.length; i++) {
+            var kata = document.createElement("p");
+            kata.className += "boxes22";
+            var kataText = document.createTextNode("");
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d22");
+            destination.appendChild(kata);
+            var ww = sampleArray[i] + 'px';
+            if (i % 2 == 0) {
+            document.getElementsByClassName("boxes22")[i].style.backgroundColor = 'gray'
+            } else {document.getElementsByClassName("boxes22")[i].style.backgroundColor = 'red'}
+            document.getElementsByClassName("boxes22")[i].style.height = '20px'
+            document.getElementsByClassName("boxes22")[i].style.width = ww
+        }
+        for (var i = 0; i < sampleArray.length; i++) {
+            var kata = document.createElement("p");
+            kata.className += "boxes";
+            var kataText = document.createTextNode("");
+            kata.appendChild(kataText);
+            var destination = document.getElementById("d23");
+            destination.appendChild(kata);
+            // var ww = 105;
+            // ww += +(5 * i);
+            var www = sampleArray[i] + 'px';
+            if (sampleArray[i] % 2 !== 0) {
+                document.getElementsByClassName("boxes")[i].style.backgroundColor = "gray";
+            } else {
+                document.getElementsByClassName("boxes")[i].style.backgroundColor = "red";
+            }
+            document.getElementsByClassName("boxes")[i].style.height = "20px";
+            document.getElementsByClassName("boxes")[i].style.width = www;
+            console.log(i);
+        }
+
+            //   } else {continue};
+            // // Create a div, with class "bar", and set the width to 100px.
+            // var newElement = document.createElement("div");
+            // // newElement.className = "bar";
+            // // newElement.style.width = i*100 + "px";
+
+            // // // Place a text label inside the new div.
+            // var newText = document.createTextNode("Bar #" + i);
+            // newElement.appendChild(newText);
+
+            // // // Put the new div on the page inside the existing element "d1".
+            // var destination = document.getElementById("d1");
+            // destination.appendChild(newElement);
+    </script>
+</body>
+
+</html>
